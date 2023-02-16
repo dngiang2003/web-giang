@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/responsive.css">
+    <script src="./static/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./images/icon.ico">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Do Ngoc Giang</title>
+    <script>
+        $(document).ready(function() {
+            $('#btn-show').click(function() {
+                $('nav').slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- menu đầu tiên -->
+    <button onclick="goToTop()" id="btn-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="banner">
+        <div class="banner_nav">
+            <a href="#" class="banner_nav-logo">DONGOCGIANG</a>
+            <nav class="nav-main">
+                <ul id="main-menu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#about-me">ABOUT</a></li>
+                    <li><a href="#my-services">SERVICE</a></li>
+                    <li><a href="#my-portfolio">PORTFOLIO</a></li>
+                    <li><a href="#my-blog">BLOG</a></li>
+                    <li><a href="#contact-me">CONTACT</a></li>
+                </ul>
+            </nav>
+            <button id="btn-show" title="show menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-1">
+            <div class="content-1-left">
+                <div class="content-1-left_say">
+                    <h2>WELCOME!</h2>
+                    <div class="wrapper">
+                        <div class="static-txt">I Am</div>
+                        <div class="dynamic-txt">
+                            <li><span>Automation Tester</span></li>
+                            <li><span>Web Developer</span></li>
+                        </div>
+                    </div>
+                    <p>I'm a Web Developer, an Automation Tester. In which, I have more than 3 months of experience in Web Development, Automation Testing I just started learning so I don't have much experience. In addition, I also program some Auto Tools on Windows operating system.</p>
+                    <a href="https://facebook.com/dngiang2003" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/giangdn1205" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:dongocgiang.edu@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+                    <a href="tel:+84398875027" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i></i></a>
+                    <a href="https://youtube.com/@dngiang2003" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a> 
+                </div>
+            </div>
+            <div class="content-1-right">
+                <img src="./images/meo.jpg" alt="" srcset="">
+            </div>
+        </div>
+        <div class="content-title" id="about-me">
+            <div class="content-title-text"><h2>ABOUT <span>ME</span></h2></div>
+            <div class="content-title-line"></div>
+        </div>
+        <div class="content-2">
+            <div class="content-2-left">
+                <img src="./images/meo.jpg" alt="" srcset="">
+            </div>
+            <div class="content-2-right">
+                <h2 class="say-hello">Hello, I Am Giang</h2>
+                <p>I'm a second-year student at HaNoi University of Industry. My major is Software Engineering in the Faculty of Information Technology. In my major, Istudy how to make, test and document computer progams, software and websites. I have started seft-studying Selenium Python since 2021 with some Automation projects.</p>
+                <h2 class="title-info">Full Name</h2><p>: Đỗ Ngọc Giang</p><br>
+                <h2 class="title-info">Age</h2><p>: 20</p><br>
+                <h2 class="title-info">Address</h2><p>: Ninh Giang, Hải Dương</p><br>
+                <h2 class="title-info">Phone</h2><p>: +84 3988 75027</p><br>
+                <h2 class="title-info">Email</h2><p>: dongocgiang.edu@gmail.com</p><br>
+                <button onclick="sayHello()">Download My CV</button>
+            </div>
+        </div>
+        <div class="content-title" id="my-services">
+            <div class="content-title-text"><h2>MY <span>SERVICES</span></h2></div>
+            <div class="content-title-line"></div>
+        </div>
+        <div class="content-3">
+            <div class="box-services">
+                <i id="icon-3" class="fa-solid fa-globe"></i><br>
+                <h2>WEB DEVELOPMENT</h2>
+                <p>I use HTML, CSS and JavaScript to develop <br> my Web.</p>
+            </div>
+            <div class="box-services">
+                <i id="icon-3" class="fa-solid fa-bug"></i><br>
+                <h2>AUTOMATION TESTING</h2>
+                <p>I use Selenium, Appium, Postman and more <br> libraries for testing.</p>
+            </div>
+            <div class="box-services">
+                <i id="icon-3" class="fa-brands fa-python"></i><br>
+                <h2>COMPUTER APPLICATION</h2>
+                <p>I use Python, Java and JavaScript to create <br> Computer Application.</p>
+            </div>
+        </div>
+        <div class="content-title" id="my-portfolio">
+            <div class="content-title-text"><h2>MY <span>PORTFOLIO</span></h2></div>
+            <div class="content-title-line"></div>
+        </div>
+        <div class="content-4">
+            <div class="box-portfolio">
+                <img src="./images/demo.png" alt="">
+                <h2 class="name-app">TOOL CRAWL ĐIỂM THI THPTQG</h2>
+                <h3 class="date-app">June 28, 2022</h3>
+                <p class="description-app">Use the Python programming language with the Requests library. Read the excel file to get the student code, then proceed to collect and save the result file.</p>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download (.exe)</a></button>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code"></i> Source Code</a></button>
+            </div>
+            <div class="box-portfolio">
+                <img src="./images/demo.png" alt="">
+                <h2 class="name-app">TOOL CRAWL ĐIỂM THI THPTQG</h2>
+                <h3 class="date-app">June 28, 2022</h3>
+                <p class="description-app">Use the Python programming language with the Requests library. Read the excel file to get the student code, then proceed to collect and save the result file.</p>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download (.exe)</a></button>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code"></i> Source Code</a></button>
+            </div>
+            <div class="box-portfolio">
+                <img src="./images/demo.png" alt="">
+                <h2 class="name-app">TOOL CRAWL ĐIỂM THI THPTQG</h2>
+                <h3 class="date-app">June 28, 2022</h3>
+                <p class="description-app">Use the Python programming language with the Requests library. Read the excel file to get the student code, then proceed to collect and save the result file.</p>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download (.exe)</a></button>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code"></i> Source Code</a></button>
+            </div>
+            <div class="box-portfolio">
+                <img src="./images/demo.png" alt="">
+                <h2 class="name-app">TOOL CRAWL ĐIỂM THI THPTQG</h2>
+                <h3 class="date-app">June 28, 2022</h3>
+                <p class="description-app">Use the Python programming language with the Requests library. Read the excel file to get the student code, then proceed to collect and save the result file.</p>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download (.exe)</a></button>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code"></i> Source Code</a></button>
+            </div>
+            <div class="box-portfolio">
+                <img src="./images/demo.png" alt="">
+                <h2 class="name-app">TOOL CRAWL ĐIỂM THI THPTQG</h2>
+                <h3 class="date-app">June 28, 2022</h3>
+                <p class="description-app">Use the Python programming language with the Requests library. Read the excel file to get the student code, then proceed to collect and save the result file.</p>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download (.exe)</a></button>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code"></i> Source Code</a></button>
+            </div>
+            <div class="box-portfolio">
+                <img src="./images/demo.png" alt="">
+                <h2 class="name-app">TOOL CRAWL ĐIỂM THI THPTQG</h2>
+                <h3 class="date-app">June 28, 2022</h3>
+                <p class="description-app">Use the Python programming language with the Requests library. Read the excel file to get the student code, then proceed to collect and save the result file.</p>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download (.exe)</a></button>
+                <button><a target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code"></i> Source Code</a></button>
+            </div>
+        </div>
+        <div class="content-title" id="my-blog">
+            <div class="content-title-text"><h2>MY <span>BLOG</span></h2></div>
+            <div class="content-title-line"></div>
+        </div>
+        <div class="content-5">
+            <div class="box-blog">
+                <img src="./images/demo.png" alt="" srcset="">
+                <h2 class="blog-title">What is programming languge</h2>
+                <p class="blog-date">Jul 25, 2022 | Coding</p>
+                <p class="blog-content">Before knowing what a programming language is, it is very important to know what a computer program is. "A computer program is a series of instructons given to a computer...</p>
+                <a href="https://github.com/giangdn1205/ky-thuat-lap-trinh-haui" class="blog-more">Read More</a>
+            </div>
+            <div class="box-blog">
+                <img src="./images/demo.png" alt="" srcset="">
+                <h2 class="blog-title">What is programming languge</h2>
+                <p class="blog-date">Jul 25, 2022 | Coding</p>
+                <p class="blog-content">Before knowing what a programming language is, it is very important to know what a computer program is. "A computer program is a series of instructons given to a computer...</p>
+                <a href="https://github.com/giangdn1205/ky-thuat-lap-trinh-haui" class="blog-more">Read More</a>
+            </div>
+            <div class="box-blog">
+                <img src="./images/demo.png" alt="" srcset="">
+                <h2 class="blog-title">What is programming languge</h2>
+                <p class="blog-date">Jul 25, 2022 | Coding</p>
+                <p class="blog-content">Before knowing what a programming language is, it is very important to know what a computer program is. "A computer program is a series of instructons given to a computer...</p>
+                <a class="blog-more">Read More</a>
+            </div>
+        </div>
+        <div class="content-title" id="contact-me">
+            <div class="content-title-text"><h2>CONTACT <span>ME</span></h2></div>
+            <div class="content-title-line"></div>
+        </div>
+        <div class="content-6">
+            <form action="https://formspree.io/f/xgeqjwjv" method="POST">
+                <div class="form-name-email-subject">
+                    <div class="form-name">
+                        <input name="name" id="full-name" type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="form-email">
+                        <input name="_replyto" id="email-address" type="text" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-subject">
+                        <input name="_subject" id="email-subject" type="text" class="form-control" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="form-message">
+                    <textarea name="message" class="form-control" rows="8" placeholder="Message (nhắn cfs có thể bỏ qua các ô ở trên)"></textarea>
+                </div>
+                <div class="form-btn">
+                    <button type="submit" class="btn_apply">Send Message</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <p>CopyRight © 2023 DONGOCGIANG | All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân loại mail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+
+        <!-- name tool -->
+        <div class="name-tool">
+            <h2>Phân loại email: Microsoft - Yahoo - Gmail - Other email</h2>
+        </div>
+        <div class="line-black"></div>
+
+        <!-- input email -->
+        <div class="input-email">
+            <h3>Nhập danh sách chứa email:</h3>
+            <textarea spellcheck="false" id="list-email" rows="10" placeholder="Danh sách chứa email"></textarea>
+            <label>
+                <input type="checkbox" id="sort-abc">Sắp xếp theo thứ tự abc
+            </label>
+        </div>
+        <div class="line-black"></div>
+
+        <!-- setting -->
+        <div class="setting">
+            <button class="button classify" onclick="emailClassification()">Phân loại</button>
+            <button class="button clear" onclick="deleteData()">Xóa dữ liệu</button>
+            <button class="button total">Total: 0</button>
+            <button class="button microsoft">Microsoft: 0</button>
+            <button class="button gmail">Gmail: 0</button>
+            <button class="button yahoo">Yahoo: 0</button>
+            <button class="button other">Other: 0</button>
+        </div>
+        <div class="line-black"></div>
+
+        <!-- out microsoft -->
+        <div class="out-mail">
+            <h3>Microsoft:</h3>
+            <textarea readonly id="microsoft" rows="10" placeholder="Danh sách Microsoft email sẽ hiện ở đây"></textarea>
+            <div class="button-save">
+                <button class="download microsoft" onclick="downloadData('email_microsoft')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
+                <button class="download microsoft" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+            </div>
+        </div>
+
+        <!-- out gmail -->
+        <div class="out-mail">
+            <h3>Gmail:</h3>
+            <textarea readonly id="gmail" rows="10" placeholder="Danh sách Gmail email sẽ hiện ở đây"></textarea>
+            <div class="button-save">
+                <button class="download gmail" onclick="downloadData('email_gmail')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
+                <button class="download gmail" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+            </div>
+        </div>
+
+        <!-- out yahoo -->
+        <div class="out-mail">
+            <h3>Yahoo:</h3>
+            <textarea readonly id="yahoo" rows="10" placeholder="Danh sách Yahoo email sẽ hiện ở đây"></textarea>
+            <div class="button-save">
+                <button class="download yahoo" onclick="downloadData('email_yahoo')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
+                <button class="download yahoo" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+            </div>
+        </div>
+
+        <!-- out other -->
+        <div class="out-mail">
+            <h3>Other:</h3>
+            <textarea readonly id="other" rows="10" placeholder="Danh sách Other email sẽ hiện ở đây"></textarea>
+            <div class="button-save">
+                <button class="download other" onclick="downloadData('email_other')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
+                <button class="download other" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <p>CopyRight © 2023 DONGOCGIANG | All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
