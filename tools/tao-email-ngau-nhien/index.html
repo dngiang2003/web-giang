@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Tạo email ngẫu nhiên</title>
+    <link rel="stylesheet" href="styleplus.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/responsive.css">
+    <script src="main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container {
+            height: calc(100vh - 68px);
+        }
+        .footer {
+            margin: 0 auto;
+            width: 1250px;
+        }
+        @media (min-width: 1250px) and (max-width: 1366px) {
+            .footer {
+                width: 1100px;
+            }
+        }
+        @media (min-width: 993px) and (max-width: 1251px) {
+            .footer {
+                width: 950px;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 994px) {
+            .footer {
+                width: 90%;
+            }
+        }
+        @media (max-width: 768px) {
+            .footer {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- name tool -->
+        <div class="name-tool">
+            <h2>Tạo email ngẫu nhiên</h2>
+        </div>
+        <div class="line-black"></div>
+
+        <!-- setting out -->
+        <div class="input-email">
+            <div class="input-box">
+                <label for="username">User name:</label>
+                <input type="text" id="username" name="username" placeholder="Ex: giang">
+            </div>
+            <div class="input-box">
+                <label for="char">Kí tự:</label>
+                <select id="char" name="char">
+                    <option value="no">No</option>
+                    <option value="random">Random</option>
+                    <option value="-">"-"</option>
+                    <option value="_">"_"</option>
+                    <option value=".">"."</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="number-type">Number type:</label>
+                <select id="number-type" name="number-type">
+                    <option value="random">Random</option>
+                    <option value="theo_thu_tu">Theo thứ tự</option>
+                    <option value="dao_thu_tu">Đảo thứ tự</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="number-firts">Số đầu:</label>
+                <input type="number" id="number-firts" name="number-firts" value="1">
+            </div>
+            <div class="input-box">
+                <label for="number-last">Số cuối:</label>
+                <input type="number" id="number-last" name="number-last" value="125">
+            </div>
+            <div class="input-box">
+                <label for="domain">Domain:</label>
+                <input type="text" id="domain" name="domain" placeholder="Ex: yahoo.com">
+            </div>
+        </div>
+
+        <div class="line-black"></div>
+
+        <!-- setting -->
+        <div class="setting">
+            <button class="button classify" onclick="emailClassification()">Get email</button>
+            <button class="button clear" onclick="deleteData()">Reset dữ liệu</button>
+            <button class="button total">Total: 0</button>
+        </div>
+        <div class="line-black"></div>
+
+        <!-- out mail -->
+        <div class="out-mail">
+            <h3>Danh sách email:</h3>
+            <textarea readonly id="data_email" rows="10" placeholder="Danh sách email sẽ hiện ở đây"></textarea>
+            <div class="button-save">
+                <button class="download success" onclick="downloadData('data_email')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
+                <button class="download success" onclick="copyToClipboard('data_email')"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <p>CopyRight © 2023 DONGOCGIANG | All Rights Reserved</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.input-email {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 20px;
+}
+
+.input-box input, select {
+    border-radius: 2px;
+    border: 1px solid rgba(130, 130, 130, 0.533);
+    width: 100%;
+    padding: 8px;
+}
+
+.input-box input:focus, select:focus {
+    outline: 0;
+    border: 1px solid rgb(15, 145, 232);
+}
+
+@media (max-width: 994px) {
+    .input-email {
+        display: flex;
+        flex-direction: column;
+    }
+    body {
+        background-color: white !important;
+    }
+    .footer {
+        display: none !important;
+    }
+    .container {
+        padding-top: 0px !important;
+    }
+}

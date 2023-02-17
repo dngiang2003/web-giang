@@ -40,6 +40,14 @@ body {
     padding: 10px;
 }
 
+button.classify, button.clear {
+    transition: transform 0.2s ease-in-out;
+}
+
+button.classify:hover, button.clear:hover {
+    transform: translateY(-2px);
+}
+
 .line-black {
     height: 1px;
     background-color: rgba(214, 214, 214, 0.401);
@@ -77,6 +85,14 @@ textarea:focus {
 
 .microsoft {
     color: rgb(15, 150, 222);
+}
+
+.success {
+    color: rgba(25, 161, 25, 0.782);
+}
+.success:hover {
+    color: white;
+    background-color: rgba(25, 161, 25, 0.782);
 }
 
 .microsoft:hover {

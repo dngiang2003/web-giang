@@ -95,7 +95,7 @@ function getCurrentDateTime() {
 }
 
 function downloadData(name) {
-    var idname = name.split('_')[1]
+    var idname = name.split('_')[1];
     var text = document.getElementById(idname).value;
     var filename = name + "_" + getCurrentDateTime() + ".txt";
     var blob = new Blob([text], {type: "text/plain"});
@@ -107,8 +107,9 @@ function downloadData(name) {
     link.click();
 }
 
-function copyToClipboard() {
-    var textarea = document.getElementById("list-email");
+function copyToClipboard(name) {
+    var idname = name.split('_')[1];
+    var textarea = document.getElementById(idname);
     textarea.select();
     document.execCommand("copy");
     alert("Đã sao chép vào clipboard");

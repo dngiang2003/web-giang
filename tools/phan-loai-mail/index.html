@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Phân loại mail</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/responsive.css">
     <script src="main.js"></script>
     <link rel="icon" type="image/x-icon" href="/images/icon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -48,7 +48,7 @@
             <textarea readonly id="microsoft" rows="10" placeholder="Danh sách Microsoft email sẽ hiện ở đây"></textarea>
             <div class="button-save">
                 <button class="download microsoft" onclick="downloadData('email_microsoft')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
-                <button class="download microsoft" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+                <button class="download microsoft" onclick="copyToClipboard('email_microsoft')"><i class="fa-regular fa-clipboard"></i>Coppy</button>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
             <textarea readonly id="gmail" rows="10" placeholder="Danh sách Gmail email sẽ hiện ở đây"></textarea>
             <div class="button-save">
                 <button class="download gmail" onclick="downloadData('email_gmail')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
-                <button class="download gmail" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+                <button class="download gmail" onclick="copyToClipboard('email_gmail')"><i class="fa-regular fa-clipboard"></i>Coppy</button>
             </div>
         </div>
 
@@ -68,7 +68,7 @@
             <textarea readonly id="yahoo" rows="10" placeholder="Danh sách Yahoo email sẽ hiện ở đây"></textarea>
             <div class="button-save">
                 <button class="download yahoo" onclick="downloadData('email_yahoo')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
-                <button class="download yahoo" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+                <button class="download yahoo" onclick="copyToClipboard('email_yahoo')"><i class="fa-regular fa-clipboard"></i>Coppy</button>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
             <textarea readonly id="other" rows="10" placeholder="Danh sách Other email sẽ hiện ở đây"></textarea>
             <div class="button-save">
                 <button class="download other" onclick="downloadData('email_other')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
-                <button class="download other" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+                <button class="download other" onclick="copyToClipboard('email_other')"><i class="fa-regular fa-clipboard"></i>Coppy</button>
             </div>
         </div>
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Lọc trùng, tách email từ văn bản</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/responsive.css">
+    <script src="main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container {
+            height: calc(100vh - 68px);
+        }
+        .footer {
+            margin: 0 auto;
+            width: 1250px;
+        }
+        @media (min-width: 1250px) and (max-width: 1366px) {
+            .footer {
+                width: 1100px;
+            }
+        }
+        @media (min-width: 993px) and (max-width: 1251px) {
+            .footer {
+                width: 950px;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 994px) {
+            .footer {
+                width: 90%;
+            }
+        }
+        @media (max-width: 768px) {
+            .footer {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- name tool -->
+        <div class="name-tool">
+            <h2>Lọc trùng, tách email từ văn bản bất kì</h2>
+        </div>
+        <div class="line-black"></div>
+
+        <!-- input email -->
+        <div class="input-email">
+            <h3>Nhập văn bản chứa email:</h3>
+            <textarea spellcheck="false" id="list-email" rows="10" placeholder="Danh sách chứa email"></textarea>
+            <label>
+                <input type="checkbox" id="sort-abc">Sắp xếp theo thứ tự abc
+            </label>
+        </div>
+        <div class="line-black"></div>
+
+        <!-- setting -->
+        <div class="setting">
+            <button class="button classify" onclick="emailClassification()">Phân loại</button>
+            <button class="button clear" onclick="deleteData()">Xóa dữ liệu</button>
+            <button class="button total">Total: 0</button>
+        </div>
+        <div class="line-black"></div>
+
+        <!-- out mail -->
+        <div class="out-mail">
+            <h3>Danh sách email:</h3>
+            <textarea readonly id="data_email" rows="10" placeholder="Danh sách email sẽ hiện ở đây"></textarea>
+            <div class="button-save">
+                <button class="download other" onclick="downloadData('data_email')"><i class="fa-sharp fa-solid fa-download"></i>Tải xuống</button>
+                <button class="download other" onclick="copyToClipboard('data_email')"><i class="fa-regular fa-clipboard"></i>Coppy</button>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <p>CopyRight © 2023 DONGOCGIANG | All Rights Reserved</p>
+    </div>
+</body>
+</html>
