@@ -1,31 +1,97 @@
-function getEmails(str) {
-  var regex = /[\w\d\.\-_]+@[a-zA-Z]+\.[a-zA-Z]+/g; // regex để tìm email trong chuỗi
-  var emails = str.match(regex); // lấy tất cả các email từ chuỗi
-
-  // kiểm tra và sắp xếp
-  var check = document.getElementById('sort-abc').checked;
-  if (check) emails.sort();
-
-  // lọc trùng
-  const uniqueEmails = [...new Set(emails)];
-  return uniqueEmails;
+function getRandomString() {
+  const characters = ['', '_', '-', '.'];
+  return characters[Math.floor(Math.random() * characters.length)];
 }
 
-function emailClassification() {
-  var str = document.getElementById('list-email').value;
-  if (str == '') {
-      alert("Vui lòng kiểm tra lại input!")
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function getEmails(username, domain) {
+  var char = document.getElementById('char').value;
+  var numberType = document.getElementById('number-type').value;
+  var firstNumber = document.getElementById('number-first').value;
+  var lastNumber = document.getElementById('number-last').value;
+
+  
+  if (firstNumber > lastNumber) {
+    let temp = firstNumber;
+    firstNumber = lastNumber;
+    lastNumber = temp;
+  }
+  if (lastNumber - firstNumber > 100000) {
+    alert("Số lượng email phải nhỏ hơn 10000 nhớ :3");
+    return;
+  }
+  var emails = [];
+  var email = ''
+  if (char =='no') char = '';
+  if (char == 'random') {
+    for (let i = firstNumber; i<= lastNumber; i++) {
+      email = username + getRandomString() + i.toString() + '@' + domain;
+      emails.push(email);
+    }
   } else {
-      var emails = getEmails(str);
+    for (let i = firstNumber; i<= lastNumber; i++) {
+      email = username + char + i.toString() + '@' + domain;
+      emails.push(email);
+    }
+  }
 
-      // get số lượng mail
-      var sumMail = emails.length;
+  if (numberType == 'dao_thu_tu') emails.sort((a, b) => b.localeCompare(a));
+  if (numberType == 'random') emails = shuffleArray(emails);
+  return emails;
+}
 
-      // send số lượng vào các nút
-      document.getElementsByClassName('total')[0].innerHTML = 'Total: ' + sumMail;
+function isEmailValid(user) {
+  // Mẫu regex để kiểm tra email
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      // send email vào các ô
-      document.getElementById('data_email').value = emails.join('\n');
+  // Kiểm tra tính hợp lệ của email với regex
+  if (regex.test(user + '@gmail.com')) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+function isDomainValid(domain) {
+  // Mẫu regex để kiểm tra domain name
+  const regex = /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}$/;
+
+  // Kiểm tra tính hợp lệ của domain với regex
+  if (regex.test(domain)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+function emailClassification() {
+  var username = document.getElementById('username').value;
+  var domain = document.getElementById('domain').value;
+  var checkUser = isEmailValid(username);
+  var checkDomain = isDomainValid(domain);
+  if (checkDomain && checkUser) {
+
+    var emails = getEmails(username, domain);
+
+    // get số lượng mail
+    var sumMail = emails.length;
+
+    // send số lượng vào các nút
+    document.getElementsByClassName('total')[0].innerHTML = 'Total: ' + sumMail;
+
+    // send email vào các ô
+    document.getElementById('data_email').value = emails.join('\n');
+  } else {
+    alert("Vui lòng kiểm tra lại Username hoặc Domain!");
   }
 }
 
@@ -33,8 +99,8 @@ function deleteData() {
   // xóa dữ liệu các ô
   document.getElementById('username').value = '';
   document.getElementById('char').value = 'no';
-  document.getElementById('number-type').value = 'random';
-  document.getElementById('number-firts').value = '1';
+  document.getElementById('number-type').value = 'theo_thu_tu';
+  document.getElementById('number-first').value = '1';
   document.getElementById('number-last').value = '125';
   document.getElementById('domain').value = '';
   document.getElementById('data_email').value = '';

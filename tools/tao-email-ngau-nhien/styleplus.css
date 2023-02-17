@@ -24,10 +24,4 @@
     body {
         background-color: white !important;
     }
-    .footer {
-        display: none !important;
-    }
-    .container {
-        padding-top: 0px !important;
-    }
 }
